@@ -6,6 +6,7 @@ import MainSVG from '../src/components/MainSVG/MainSVG';
 import Listings from '../src/components/Listings/Listings.js';
 import listingsData from '../src/data/listingsData.js';
 import InfoModal from '../src/components/Modal/Modal.js';
+import Footer from '../src/components/Footer/Footer.js';
 
 
 
@@ -32,7 +33,7 @@ class App extends Component {
         <Header />
         <Listings title="Type R Generations"/>
      
-
+      <Footer />
       </div>
     )
   }

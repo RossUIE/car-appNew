@@ -94,7 +94,7 @@
   left: 50%;
   transform: translate(-50%, 0);
   margin-top: 50px;
- 
+  cursor: pointer;
   
 }
 
@@ -123,10 +123,10 @@
 
 
 
-  background: rgba(63, 191, 191,.8); /* Old browsers */
-  background: -moz-linear-gradient(-45deg, rgba(63, 191, 191,1) 0%, rgba(63, 191, 191,.8) 79%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, rgba(63, 191, 191,1) 0%,rgba(63, 191, 191,.8) 79%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, rgba(63, 191, 191,1) 0%,rgba(63, 191, 191,.8) 79%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: rgba(38, 49, 55,.8); /* Old browsers */
+  background: -moz-linear-gradient(-45deg, rgba(38, 49, 55,1) 0%, rgba(38, 49, 55,.8) 79%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, rgba(38, 49, 55,1) 0%,rgba(38, 49, 55,.8) 79%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, rgba(38, 49, 55,1) 0%,rgba(38, 49, 55,.8) 79%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
 
 }
@@ -134,6 +134,42 @@
   opacity: 1;
   transition: all 0.4s ease-in-out;
 }
+
+
+ p {
+  color: grey;
+  padding: 2%;
+  font-size: 0.9rem;
+  font-weight: 700;
+
+ 
+}
+
+
+.btn-close button {
+  cursor: pointer;
+  transition: background 0.6s ease-in-out;
+  background: #009faf;
+  padding: 7px 25px;
+  color: white;
+  border-radius: 5px;
+
+}
+
+.modalImage {
+ 
+  height: 30vh;
+ 
+}
+
+.modalBottom {
+  
+ 
+  padding: 20px;
+
+}
+
+
 
 
 

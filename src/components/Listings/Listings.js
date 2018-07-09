@@ -13,7 +13,12 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    width: '60vh',
+    height: '70vh',
+    padding: 0
+
+    
   }
 };
 export default class Listings extends Component {
@@ -32,49 +37,99 @@ export default class Listings extends Component {
           carName: "Honda",
           model: "Civic EK9",
           image: 'https://upload.wikimedia.org/wikipedia/commons/6/65/EK9_small_1.jpg',
-          modalIsOpen: false
+          modalIsOpen: false,
+          engine: 'B16B',
+          displacement: '1.6L',
+          Bodytype: '3 Door Hatchback',
+          bhp: '185bhp',
+          torque: '160 N⋅m (118 lb⋅ft) @ 7,500 rpm',
+          topSpeed: '148 mph',
+          modalImage:'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Civic_Type_R_rear.JPG/440px-Civic_Type_R_rear.JPG'
+
+
         },
         {
           Year: '2001-2005',
           carName: "Honda",
           model: "Civic EP3",
           image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/IMFJ_Honda_Civic_Type_R_Gen6.jpg/560px-IMFJ_Honda_Civic_Type_R_Gen6.jpg',
-          modalIsOpen: false
+          modalIsOpen: false,
+          engine: 'K20A2',
+          displacement: '2.0L',
+          Bodytype: '3 door Hatchback',
+          bhp: '200bhp',
+          torque: '160 N⋅m (118 lb⋅ft) @ 7,500 rpm',
+          topSpeed: '141 mph',
+          modalImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Honda_CIVIC_TYPE_R_%28EP3%29_rear.jpg/440px-Honda_CIVIC_TYPE_R_%28EP3%29_rear.jpg'
         },
         {
           Year: '2006-2011',
           carName: "Honda",
           model: "Civic FD2",
           image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/2007_Honda_Civic_TypeR_01.JPG/560px-2007_Honda_Civic_TypeR_01.JPG',
-          modalIsOpen: false
+          modalIsOpen: false,
+          engine: 'K20A2',
+          displacement: '2.0L',
+          Bodytype: '4-door Sedan',
+          bhp: '222 hp',
+          torque: '1215 N⋅m (159 lb⋅ft) @ 6100 RPM',
+          topSpeed: '148 mph',
+          modalImage:'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/2007_Honda_Civic_TypeR_02.JPG/440px-2007_Honda_Civic_TypeR_02.JPG'
         },
         {
           Year: '2006-2011',
           carName: "Honda",
           model: "Civic FN2",
           image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Macedontyper.jpg/440px-Macedontyper.jpg',
-          modalIsOpen: false
+          modalIsOpen: false,
+          engine: 'K20A2',
+          displacement: '2.0L',
+          Bodytype: '3 door Hatchback',
+          bhp: '200bhp',
+          torque: '160 N⋅m (118 lb⋅ft) @ 7,500 rpm',
+          topSpeed: '148 mph',
+          modalImage:'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/FN2_CW_REAR.jpg/440px-FN2_CW_REAR.jpg'
         },
         {
           Year: '2015-2017',
           carName: "Honda",
           model: "Civic FK2",
           image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/2015-03-03_Geneva_Motor_Show_4037.JPG/560px-2015-03-03_Geneva_Motor_Show_4037.JPG',
-          modalIsOpen: false
+          modalIsOpen: false,
+          engine: 'K20C1',
+          displacement: '2.0L',
+          Bodytype: '3 Door Hatchback',
+          bhp: '306 bhp',
+          torque: '400 N⋅m (300 lb⋅ft) at 2500–4500 RPM',
+          topSpeed: '155 mph',
+          modalImage:''
         },
         {
           Year: '2017-Present',
           carName: "Honda",
           model: "Civic FK8",
           image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Honda_Civic_Type_R%2C_IAA_2017%2C_Frankfurt_%281Y7A3329%29.jpg/440px-Honda_Civic_Type_R%2C_IAA_2017%2C_Frankfurt_%281Y7A3329%29.jpg',
-          modalIsOpen: false
+          modalIsOpen: false,
+          engine: 'K20C1 Turbo I4',
+          displacement: '2.0L',
+          Bodytype: '5-door Hatchback',
+          bhp: '315 bhp',
+          torque: '',
+          topSpeed: '155 mph',
+          modalImage:'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/2017_Honda_Civic_Type_R_GT_i-VTEC_Turbo_2.0_Front.jpg/560px-2017_Honda_Civic_Type_R_GT_i-VTEC_Turbo_2.0_Front.jpg'
         }
 
       ]
 
     }
 
+    if(listingsData == '' || listingsData.length == 0) {
+      return "Unkown"
+    }
+
   } //constructor end
+
+
 
   toggleModal = (i) => {
     const listingsData = [...this.state.ListingsData];
@@ -86,7 +141,7 @@ export default class Listings extends Component {
 
   afterOpenModal = () => {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
+    //this.subtitle.style.color = '#f00';
   }
 
   printCard = () => {
@@ -110,17 +165,24 @@ export default class Listings extends Component {
                     style={customStyles}
                     contentLabel="Example Modal"
                   >
-                    {i}
-                    <h2 ref={subtitle => this.subtitle = subtitle}>{listData.carName}{listData.model}</h2>
+                    <div className="modalTop">
+                    <div className="modalImage" style={{ background: `url("${listData.modalImage}") no-repeat center center ` }}></div>
+                    </div>
+
+                    <div className="modalBottom">
+                    <h2>{listData.carName} {listData.model}</h2>
+                    
+                    <p>Year of Manufacture: {listData.Year}</p>
+                    <p>Engine: {listData.engine}</p>
+                    <p>Displacement: {listData.displacement}</p>
+                    <p>BHP: {listData.bhp}</p>
+                    <p>Torque: {listData.torque}</p>
+                    <p>Top Speed: {listData.topSpeed}</p>
+
+                    <div className="btn-close">
                     <button onClick={() => this.toggleModal(i)}>close</button>
-                    <div>{listData.Year}</div>
-                    <form>
-                      <input />
-                      <button>tab navigation</button>
-                      <button>stays</button>
-                      <button>inside</button>
-                      <button>the modal</button>
-                    </form>
+                    </div>
+                    </div>
                   </Modal>
                 
                 <span className="year">{listData.Year}</span>
