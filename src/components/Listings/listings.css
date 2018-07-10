@@ -1,13 +1,22 @@
+@supports not (display: grid) {
+  flex: 0 0 30px;
+}
+
+@supports (display: grid) {
+  flex: 0 0 30px;
+}
+
+
 .listing {
-  
   background-color: white;
   border-radius: 5px;
   -webkit-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
   -moz-box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
   box-shadow: 0px 9px 54px -4px rgba(224,224,224,1);
   margin-right: 20px;
-  display: inline-block;
   margin-bottom: 30px;
+ 
+
 }
 
 #contentArea {
@@ -16,7 +25,7 @@
   padding: 5%;
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 40% 40%;
+  grid-template-rows: 325px 325px;
 }
 
 
@@ -37,6 +46,8 @@
   -moz-border-radius-topright: 5px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  
+  
 }
 
 .year {
@@ -57,13 +68,12 @@
   font-weight: 700;
   text-align: left;
 
-
-
 }
 
 .bottomInfo span {
   display: block;
   padding: 1%;
+  
 }
 
 

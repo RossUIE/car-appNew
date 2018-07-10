@@ -5,7 +5,7 @@ header {
     color: white;
     overflow: auto;
     padding: 10px 15px;
-
+    display: flex;
     font-size: 1.1rem;
 }
 
@@ -16,15 +16,19 @@ header {
 }
 
 .logo {
-    width: 200px;
-    float: left;
-    padding: 10px 20px;
-
+    flex: .25;
+    padding: 10px 20px;  
 }
 
+
+
+
+
 nav {
-  float: right;
+  flex: .25;
   padding: 10px;
+  margin-left: auto;
+
 }
 
 nav a {
@@ -33,6 +37,10 @@ nav a {
   padding: 10px 20px;
   font-weight: 300;
   font-size: 1rem;
+  
+
+  
+  
 
 }
 

@@ -31,6 +31,8 @@ class App extends Component {
       <div>
         
         <Header />
+
+        <MainSVG/>
         
         <Listings />
      

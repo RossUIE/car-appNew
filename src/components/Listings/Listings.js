@@ -60,7 +60,8 @@ export default class Listings extends Component {
           bhp: '200bhp',
           torque: '160 N⋅m (118 lb⋅ft) @ 7,500 rpm',
           topSpeed: '141 mph',
-          modalImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Honda_CIVIC_TYPE_R_%28EP3%29_rear.jpg/440px-Honda_CIVIC_TYPE_R_%28EP3%29_rear.jpg'
+          modalImage: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Honda_CIVIC_TYPE_R_%28EP3%29_rear.jpg/440px-Honda_CIVIC_TYPE_R_%28EP3%29_rear.jpg',
+          customStyle: false
         },
         {
           Year: '2006-2011',
@@ -212,7 +213,7 @@ export default class Listings extends Component {
     return (
 
       <div id="contentArea">
-        <h1>{this.props.title}</h1>
+        {/* <h1>{this.props.title}</h1> */}
         {this.printCard()}
       </div>
     )
