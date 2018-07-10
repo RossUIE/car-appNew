@@ -29,11 +29,12 @@ class App extends Component {
     return (
 
       <div>
-
+        
         <Header />
-        <Listings title="Type R Generations"/>
+        
+        <Listings />
      
-      <Footer />
+      
       </div>
     )
   }
