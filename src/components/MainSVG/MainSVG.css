@@ -1,5 +1,15 @@
-.SVG {
+.SVGContainer {
   width: 100%;
   height: 50vh;
-  background-color: grey;
+  
+  display: flex;
+}
+
+
+.SVGContainer > svg {
+  flex: 1;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: center;
+  
 }
