@@ -14,13 +14,20 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    width: '60vh',
-    height: '70vh',
+    width: '80vh',
+    height: '80vh',
     padding: 0
 
     
   }
 };
+
+
+const modalCustom = {
+
+  color: 'black'
+}
+
 export default class Listings extends Component {
 
 
@@ -103,7 +110,7 @@ export default class Listings extends Component {
           bhp: '306 bhp',
           torque: '400 N⋅m (300 lb⋅ft) at 2500–4500 RPM',
           topSpeed: '155 mph',
-          modalImage:''
+          modalImage:'http://www.autosspeed.com/wp-content/uploads/2017/03/Honda-Civic-Type-R-2.jpg'
         },
         {
           Year: '2017-Present',
@@ -167,18 +174,19 @@ export default class Listings extends Component {
                     contentLabel="Example Modal"
                   >
                     <div className="modalTop">
-                    <div className="modalImage" style={{ background: `url("${listData.modalImage}") no-repeat center center ` }}></div>
+                    <div className="modalImage" style={{ background: `url("${listData.modalImage}") no-repeat center center`, backgroundSize: "cover" }}></div>
                     </div>
 
                     <div className="modalBottom">
+                    <i className="far fa-square"></i>
                     <h2>{listData.carName} {listData.model}</h2>
                     
-                    <p>Year of Manufacture: {listData.Year}</p>
-                    <p>Engine: {listData.engine}</p>
-                    <p>Displacement: {listData.displacement}</p>
-                    <p>BHP: {listData.bhp}</p>
-                    <p>Torque: {listData.torque}</p>
-                    <p>Top Speed: {listData.topSpeed}</p>
+                    <p><span style={modalCustom}>Year of Manufacture:</span> {listData.Year}</p>
+                    <p><span style={modalCustom}>Engine:</span> {listData.engine}</p>
+                    <p><span style={modalCustom}>Displacement:</span> {listData.displacement}</p>
+                    <p><span style={modalCustom}>BHP:</span> {listData.bhp}</p>
+                    <p><span style={modalCustom}>Torque:</span> {listData.torque}</p>
+                    <p><span style={modalCustom}>Top Speed:</span> {listData.topSpeed}</p>
 
                     <div className="btn-close">
                     <button onClick={() => this.toggleModal(i)}>close</button>

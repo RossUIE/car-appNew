@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0",
     "gsap": "^2.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -10,6 +11,7 @@
     "react-scripts": "1.1.4",
     "react-waypoint": "^8.0.2"
   },
+  
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",

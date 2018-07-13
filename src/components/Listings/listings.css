@@ -166,9 +166,11 @@
 
 .modalImage {
  
-  height: 30vh;
- 
+  height: 40vh;
+  width: 100%;
 }
+
+
 
 .modalBottom {
   
@@ -176,6 +178,12 @@
   padding: 20px;
 
 }
+
+.modalBottom button {
+  margin-top: 30px;
+}
+
+
 
 
 

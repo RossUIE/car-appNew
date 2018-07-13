@@ -20,10 +20,6 @@ header {
     padding: 10px 20px;  
 }
 
-
-
-
-
 nav {
   flex: .25;
   padding: 10px;
@@ -37,11 +33,6 @@ nav a {
   padding: 10px 20px;
   font-weight: 300;
   font-size: 1rem;
-  
-
-  
-  
-
 }
 
 nav a:hover {
@@ -49,11 +40,15 @@ nav a:hover {
 }
 
 .register-btn {
-          background: #009faf;
-          padding: 7px 25px;
-          text-align: center;
-          color: white;
-          border-radius: 5px;
-          margin-right: 50px;
+  background: #009faf;
+  padding: 7px 25px;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin-right: 50px;
 
-      }
+}
+
+.register-btn:hover {
+  color: white;
+}
